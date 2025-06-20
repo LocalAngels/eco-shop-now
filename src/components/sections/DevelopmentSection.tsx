@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Wrench, Users, Mail } from 'lucide-react';
-
 export const DevelopmentSection = () => {
-  return (
-    <section className="py-20 px-4">
+  return <section className="py-20 px-4">
       <div className="max-w-4xl mx-auto text-center">
         <div className="inline-flex p-4 bg-yellow-100 rounded-full mb-8">
           <Wrench className="w-8 h-8 text-yellow-600" />
@@ -31,15 +28,12 @@ export const DevelopmentSection = () => {
             <div className="hidden sm:block w-px h-6 bg-gray-300"></div>
             <div className="flex items-center gap-2 text-gray-600">
               <Mail className="w-5 h-5 text-green-500" />
-              <span>Launch Anfang 2025 geplant</span>
+              <span>Launch Anfang 2026 geplant</span>
             </div>
           </div>
           
           <div className="mt-8">
-            <Button 
-              onClick={() => window.location.href = 'mailto:hallo@lokalshopping.de?subject=Interesse an Pilot-Partnerschaft'}
-              className="px-8 py-6 text-lg bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 transition-all duration-300"
-            >
+            <Button onClick={() => window.location.href = 'mailto:hallo@lokalshopping.de?subject=Interesse an Pilot-Partnerschaft'} className="px-8 py-6 text-lg bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 transition-all duration-300">
               Pilot-Partner werden
             </Button>
             <p className="text-sm text-gray-500 mt-3">
@@ -48,6 +42,5 @@ export const DevelopmentSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
