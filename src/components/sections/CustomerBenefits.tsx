@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { MapPin, Clock, Leaf, Smartphone } from 'lucide-react';
+import { AppMockup } from '@/components/ui/AppMockup';
 
 const benefits = [
   {
@@ -69,14 +70,15 @@ export const CustomerBenefits = () => {
           ))}
         </div>
 
-        {/* Optional App Mockup Placeholder */}
+        {/* App Mockup */}
         <div className="mt-24 text-center">
-          <div className="bg-white rounded-3xl p-16 border-2 border-gray-200 shadow-lg">
-            <div className="w-40 h-80 mx-auto bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl flex items-center justify-center shadow-xl">
-              <Smartphone className="w-20 h-20 text-gray-400" />
-            </div>
-            <p className="text-gray-500 mt-6 italic text-xl">App-Mockup folgt bald...</p>
-          </div>
+          <h3 className="text-4xl font-bold text-gray-900 mb-4">
+            So einfach geht's
+          </h3>
+          <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+            Entdecke lokale Geschäfte, bestelle deine Lieblingssachen und lass sie dir bequem liefern
+          </p>
+          <AppMockup />
         </div>
       </div>
     </section>
