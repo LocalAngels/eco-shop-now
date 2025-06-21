@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Instagram, Mail, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -41,9 +42,12 @@ export const Footer = () => {
           <div>
             <h4 className="text-2xl font-semibold mb-6">Rechtliches</h4>
             <div className="space-y-3">
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-lg">
+              <Link 
+                to="/impressum" 
+                className="block text-gray-300 hover:text-white transition-colors text-lg"
+              >
                 Impressum
-              </a>
+              </Link>
               <Link 
                 to="/datenschutz" 
                 className="block text-gray-300 hover:text-white transition-colors text-lg"
