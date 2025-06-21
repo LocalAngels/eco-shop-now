@@ -1,7 +1,10 @@
 import React from 'react';
 import { Instagram, Mail, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 export const Footer = () => {
-  return <footer className="bg-gray-900 text-white py-20 px-4">
+  return (
+    <footer className="bg-gray-900 text-white py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand & Mission */}
@@ -41,12 +44,18 @@ export const Footer = () => {
               <a href="#" className="block text-gray-300 hover:text-white transition-colors text-lg">
                 Impressum
               </a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-lg">
+              <Link 
+                to="/datenschutz" 
+                className="block text-gray-300 hover:text-white transition-colors text-lg"
+              >
                 Datenschutz
-              </a>
-              <a href="#" className="block text-gray-300 hover:text-white transition-colors text-lg">
+              </Link>
+              <Link 
+                to="/agb" 
+                className="block text-gray-300 hover:text-white transition-colors text-lg"
+              >
                 AGB
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -55,5 +64,6 @@ export const Footer = () => {
           <p className="text-gray-400 text-lg">© 2025 Local Angels. Bald in Braunschweig verfügbar.</p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
