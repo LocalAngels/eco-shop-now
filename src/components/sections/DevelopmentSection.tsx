@@ -35,9 +35,7 @@ export const DevelopmentSection = () => {
             <Button onClick={() => window.location.href = 'mailto:hallo@localangels.de?subject=Interesse an Pilot-Partnerschaft Braunschweig'} className="px-12 py-8 text-xl bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl rounded-xl">
               Pilot-Partner werden
             </Button>
-            <p className="text-lg text-gray-600 mt-6 font-medium">
-              oder schreib uns direkt an hallo@localangels.de
-            </p>
+            <p className="text-lg text-gray-600 mt-6 font-medium">oder schreib uns direkt an local-angel@outlook.de</p>
           </div>
         </div>
       </div>
