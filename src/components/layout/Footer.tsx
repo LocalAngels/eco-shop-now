@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Instagram, Mail, Heart } from 'lucide-react';
-
 export const Footer = () => {
-  return (
-    <footer className="bg-gray-900 text-white py-20 px-4">
+  return <footer className="bg-gray-900 text-white py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand & Mission */}
@@ -26,19 +23,11 @@ export const Footer = () => {
           <div>
             <h4 className="text-2xl font-semibold mb-6">Kontakt</h4>
             <div className="space-y-4">
-              <a 
-                href="mailto:hallo@localangels.de" 
-                className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors text-lg"
-              >
+              <a href="mailto:hallo@localangels.de" className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors text-lg">
                 <Mail className="w-5 h-5" />
                 hallo@localangels.de
               </a>
-              <a 
-                href="https://www.instagram.com/localangelapp/?igsh=MXFtOTR1N2syOXE0cg%3D%3D#" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-gray-300 hover:text-pink-400 transition-colors text-lg"
-              >
+              <a href="https://www.instagram.com/localangelapp/?igsh=MXFtOTR1N2syOXE0cg%3D%3D#" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-300 hover:text-pink-400 transition-colors text-lg">
                 <Instagram className="w-5 h-5" />
                 @localangelapp
               </a>
@@ -63,11 +52,8 @@ export const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 pt-12 text-center">
-          <p className="text-gray-400 text-lg">
-            © 2024 Local Angels. Bald in Braunschweig verfügbar.
-          </p>
+          <p className="text-gray-400 text-lg">© 2025 Local Angels. Bald in Braunschweig verfügbar.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
