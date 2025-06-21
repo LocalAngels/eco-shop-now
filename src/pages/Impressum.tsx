@@ -39,8 +39,8 @@ const Impressum = () => {
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Kontakt:</h2>
             <p className="text-gray-700">
               E-Mail: 
-              <a href="mailto:kontakt@lokal-app.de" className="text-red-600 hover:text-red-700 ml-2">
-                kontakt@lokal-app.de
+              <a href="mailto:local-angel@outlook.de" className="text-red-600 hover:text-red-700 ml-2">
+                local-angel@outlook.de
               </a>
             </p>
           </section>
