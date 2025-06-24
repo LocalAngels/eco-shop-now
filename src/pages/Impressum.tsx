@@ -28,9 +28,10 @@ const Impressum = () => {
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Angaben gemäß § 5 TMG:</h2>
             <div className="p-4 bg-gray-50 rounded-lg">
               <p className="text-gray-700">
-                Max Mustermann<br />
-                Musterstraße 12<br />
-                12345 Braunschweig
+                Bollhorst, Heuer, Mavrin GbR<br />
+                Höpskamp 24<br />
+                29633 Munster<br />
+                Deutschland
               </p>
             </div>
           </section>
@@ -38,6 +39,7 @@ const Impressum = () => {
           <section className="mb-10">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Kontakt:</h2>
             <p className="text-gray-700">
+              Telefon: +49 15161053344<br />
               E-Mail: 
               <a href="mailto:local-angel@outlook.de" className="text-red-600 hover:text-red-700 ml-2">
                 local-angel@outlook.de
@@ -46,12 +48,21 @@ const Impressum = () => {
           </section>
 
           <section className="mb-10">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Vertreten durch die Gesellschafter:</h2>
+            <div className="p-4 bg-gray-50 rounded-lg">
+              <p className="text-gray-700">
+                Jan Bollhorst<br />
+                Lauritz Heuer<br />
+                Max Mavrin
+              </p>
+            </div>
+          </section>
+
+          <section className="mb-10">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h2>
             <div className="p-4 bg-gray-50 rounded-lg">
               <p className="text-gray-700">
-                Max Mustermann<br />
-                Musterstraße 12<br />
-                12345 Braunschweig
+                Jan Bollhorst
               </p>
             </div>
           </section>
