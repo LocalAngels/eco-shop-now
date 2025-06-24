@@ -1,24 +1,10 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Instagram, ShoppingBag, Bike, Heart } from 'lucide-react';
-import { toast } from '@/hooks/use-toast';
 
 export const HeroSection = () => {
-  const [email, setEmail] = useState('');
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      toast({
-        title: "Danke für dein Interesse!",
-        description: "Wir melden uns, sobald es in Braunschweig losgeht 🚀",
-      });
-      // Form wird durch Formspree verarbeitet, daher Reset nach Toast
-      setTimeout(() => setEmail(''), 1000);
-    }
-  };
+  const [showNewsletterForm, setShowNewsletterForm] = useState(false);
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-gray-50 to-white">
@@ -59,33 +45,49 @@ export const HeroSection = () => {
           umweltfreundlich per Fahrrad liefern. Für eine lebendige, nachhaltige Stadt.
         </p>
 
-        {/* Newsletter Signup */}
-        <form 
-          action="https://formspree.io/f/DEIN_ENDPUNKT" 
-          method="POST" 
-          onSubmit={handleSubmit} 
-          className="max-w-xl mx-auto mb-12 animate-fade-in"
-        >
-          <div className="flex gap-4 p-2 bg-white rounded-2xl border-2 border-gray-200 shadow-lg focus-within:border-red-400 transition-colors">
-            <Input
-              type="email"
-              name="email"
-              placeholder="Deine E-Mail für Launch-Updates"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="text-lg py-6 border-0 focus:ring-0 bg-transparent placeholder:text-gray-500"
-              required
-            />
-            <Button 
-              type="submit" 
-              className="px-8 py-6 text-lg bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl rounded-xl"
-            >
-              Dabei sein!
-            </Button>
-          </div>
-          <input type="hidden" name="_subject" value="Neue Newsletter-Anmeldung" />
-          <input type="hidden" name="_next" value={window.location.origin} />
-        </form>
+        {/* Newsletter Button */}
+        <div className="max-w-xl mx-auto mb-12 animate-fade-in">
+          <Button 
+            onClick={() => setShowNewsletterForm(!showNewsletterForm)}
+            className="px-8 py-6 text-lg bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl rounded-xl"
+          >
+            Für Launch-Updates eintragen
+          </Button>
+          
+          {/* Newsletter Form (Mailchimp Embed) */}
+          {showNewsletterForm && (
+            <div className="mt-6 p-6 bg-white rounded-2xl border-2 border-gray-200 shadow-lg">
+              {/* Hier wird der vollständige Mailchimp-Einbettungscode eingefügt */}
+              <div id="mc_embed_signup">
+                <form action="https://DEINE-MAILCHIMP-URL.us21.list-manage.com/subscribe/post?u=DEINE-USER-ID&amp;id=DEINE-LIST-ID" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+                  <div id="mc_embed_signup_scroll" className="space-y-4">
+                    <div className="mc-field-group">
+                      <label htmlFor="mce-EMAIL" className="block text-lg font-medium text-gray-800 mb-2">E-Mail Adresse *</label>
+                      <input type="email" name="EMAIL" className="required email w-full text-lg py-3 px-4 border-2 border-gray-300 focus:border-red-500 rounded-xl" id="mce-EMAIL" placeholder="deine@email.de" required />
+                    </div>
+                    <div id="mce-responses" className="clear foot">
+                      <div className="response" id="mce-error-response" style={{display:'none'}}></div>
+                      <div className="response" id="mce-success-response" style={{display:'none'}}></div>
+                    </div>
+                    <div style={{position: 'absolute', left: '-5000px'}} aria-hidden="true">
+                      <input type="text" name="b_DEINE-USER-ID_DEINE-LIST-ID" tabIndex={-1} defaultValue="" />
+                    </div>
+                    <div className="optionalParent">
+                      <div className="clear foot">
+                        <input type="submit" value="Anmelden" name="subscribe" id="mc-embedded-subscribe" className="button w-full py-3 text-lg bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-medium rounded-xl transition-all duration-300 cursor-pointer" />
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <p className="text-sm text-gray-600 mt-4">
+                Du erhältst nur wichtige Updates zum Launch. Keine Spam-Mails! 
+                <br />
+                Abmeldung jederzeit möglich.
+              </p>
+            </div>
+          )}
+        </div>
 
         {/* Instagram Link */}
         <div className="animate-fade-in">
