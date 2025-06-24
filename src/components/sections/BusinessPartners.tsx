@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+
+import React from 'react';
 import { Eye, TrendingUp, Truck, Star, DollarSign, Shield } from 'lucide-react';
-import { toast } from '@/hooks/use-toast';
 
 const partnerBenefits = [
   {
@@ -52,38 +49,6 @@ const partnerBenefits = [
 ];
 
 export const BusinessPartners = () => {
-  const [formData, setFormData] = useState({
-    businessName: '',
-    contactName: '',
-    email: '',
-    message: ''
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Partner application:', formData);
-    toast({
-      title: "Danke für dein Interesse!",
-      description: "Wir melden uns schnellstmöglich bei dir 🤝"
-    });
-    // Form wird durch Formspree verarbeitet, daher Reset nach Toast
-    setTimeout(() => {
-      setFormData({
-        businessName: '',
-        contactName: '',
-        email: '',
-        message: ''
-      });
-    }, 1000);
-  };
-
   return (
     <section className="py-24 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -100,7 +65,7 @@ export const BusinessPartners = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {partnerBenefits.map((benefit, index) => (
             <div key={index} className={`bg-white rounded-3xl p-8 text-center hover:scale-105 transition-all duration-300 border-2 ${benefit.borderColor} shadow-lg hover:shadow-xl`}>
               <div className={`inline-flex p-4 rounded-2xl ${benefit.bgColor} mb-6 ${benefit.color}`}>
@@ -114,89 +79,6 @@ export const BusinessPartners = () => {
               </p>
             </div>
           ))}
-        </div>
-
-        {/* Partner Application Form */}
-        <div className="max-w-3xl mx-auto bg-gray-50 rounded-3xl p-12 border-2 border-gray-200 shadow-xl">
-          <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Jetzt kostenlos Partner werden
-          </h3>
-          
-          <form 
-            action="https://formspree.io/f/DEIN_ENDPUNKT" 
-            method="POST" 
-            onSubmit={handleSubmit} 
-            className="space-y-8"
-          >
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <label className="block text-lg font-medium text-gray-800 mb-3">
-                  Name des Geschäfts *
-                </label>
-                <Input 
-                  name="businessName" 
-                  value={formData.businessName} 
-                  onChange={handleInputChange} 
-                  placeholder="z.B. Blumen Müller" 
-                  required 
-                  className="text-lg py-6 border-2 border-gray-300 focus:border-green-500 rounded-xl" 
-                />
-              </div>
-              <div>
-                <label className="block text-lg font-medium text-gray-800 mb-3">
-                  Ansprechpartner *
-                </label>
-                <Input 
-                  name="contactName" 
-                  value={formData.contactName} 
-                  onChange={handleInputChange} 
-                  placeholder="Dein Name" 
-                  required 
-                  className="text-lg py-6 border-2 border-gray-300 focus:border-green-500 rounded-xl" 
-                />
-              </div>
-            </div>
-            
-            <div>
-              <label className="block text-lg font-medium text-gray-800 mb-3">
-                E-Mail *
-              </label>
-              <Input 
-                type="email" 
-                name="email" 
-                value={formData.email} 
-                onChange={handleInputChange} 
-                placeholder="kontakt@deinladen.de" 
-                required 
-                className="text-lg py-6 border-2 border-gray-300 focus:border-green-500 rounded-xl" 
-              />
-            </div>
-            
-            <div>
-              <label className="block text-lg font-medium text-gray-800 mb-3">
-                Nachricht (optional)
-              </label>
-              <Textarea 
-                name="message" 
-                value={formData.message} 
-                onChange={handleInputChange} 
-                placeholder="Erzähl uns kurz von deinem Geschäft..." 
-                rows={5} 
-                className="text-lg border-2 border-gray-300 focus:border-green-500 resize-none rounded-xl" 
-              />
-            </div>
-            
-            <Button 
-              type="submit" 
-              className="w-full py-8 text-xl bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl rounded-xl text-slate-50"
-            >
-              Unverbindlich & kostenlos Partner werden
-            </Button>
-
-            {/* Hidden fields for Formspree */}
-            <input type="hidden" name="_subject" value="Neue Partner-Anfrage" />
-            <input type="hidden" name="_next" value={window.location.origin} />
-          </form>
         </div>
       </div>
     </section>
