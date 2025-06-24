@@ -80,7 +80,7 @@ export const DevelopmentSection = () => {
           </p>
           
           <form 
-            action="https://formspree.io/f/DEIN_ENDPUNKT" 
+            action="https://formspree.io/f/mdkzwqdz" 
             method="POST" 
             onSubmit={handleSubmit} 
             className="space-y-8"
