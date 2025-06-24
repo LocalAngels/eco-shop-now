@@ -11,12 +11,12 @@ export const HeroSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
-      console.log('Newsletter signup:', email);
       toast({
         title: "Danke für dein Interesse!",
         description: "Wir melden uns, sobald es in Braunschweig losgeht 🚀",
       });
-      setEmail('');
+      // Form wird durch Formspree verarbeitet, daher Reset nach Toast
+      setTimeout(() => setEmail(''), 1000);
     }
   };
 
@@ -60,10 +60,16 @@ export const HeroSection = () => {
         </p>
 
         {/* Newsletter Signup */}
-        <form onSubmit={handleSubmit} className="max-w-xl mx-auto mb-12 animate-fade-in">
+        <form 
+          action="https://formspree.io/f/DEIN_ENDPUNKT" 
+          method="POST" 
+          onSubmit={handleSubmit} 
+          className="max-w-xl mx-auto mb-12 animate-fade-in"
+        >
           <div className="flex gap-4 p-2 bg-white rounded-2xl border-2 border-gray-200 shadow-lg focus-within:border-red-400 transition-colors">
             <Input
               type="email"
+              name="email"
               placeholder="Deine E-Mail für Launch-Updates"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -77,6 +83,8 @@ export const HeroSection = () => {
               Dabei sein!
             </Button>
           </div>
+          <input type="hidden" name="_subject" value="Neue Newsletter-Anmeldung" />
+          <input type="hidden" name="_next" value={window.location.origin} />
         </form>
 
         {/* Instagram Link */}
