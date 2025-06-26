@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import { MapPin, Clock, Leaf, Smartphone } from 'lucide-react';
 import { AppMockup } from '@/components/ui/AppMockup';
@@ -103,30 +104,50 @@ export const CustomerBenefits = () => {
 
           {/* Newsletter Form (Mailchimp Embed) */}
           {showNewsletterForm && (
-            <div className="mt-7 p-5 bg-gray-50 rounded-2xl border-2 border-gray-200">
+            <div className="mt-7 p-6 bg-gray-50 rounded-2xl border-2 border-gray-200 shadow-lg animate-fade-in">
               <div id="mc_embed_signup">
                 <form action="DEINE-MAILCHIMP-URL" method="post" id="mc-embedded-subscribe-form-2" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
-                  <div id="mc_embed_signup_scroll" className="space-y-4">
-                    <div className="mc-field-group">
-                      <label htmlFor="mce-EMAIL-2" className="block text-base font-medium text-gray-800 mb-2">E-Mail Adresse *</label>
-                      <input type="email" name="EMAIL" className="required email w-full text-base py-3 px-4 border-2 border-gray-300 focus:border-red-500 rounded-xl" id="mce-EMAIL-2" placeholder="deine@email.de" required />
+                  <div id="mc_embed_signup_scroll" className="space-y-5">
+                    <h3 className="text-xl font-semibold text-gray-900">Newsletter abonnieren</h3>
+                    
+                    <div className="mc-field-group text-left">
+                      <label htmlFor="mce-EMAIL-2" className="block text-sm font-medium text-gray-700 mb-2">
+                        E-Mail Adresse <span className="text-red-500">*</span>
+                      </label>
+                      <input 
+                        type="email" 
+                        name="EMAIL" 
+                        className="required email w-full text-base py-3 px-4 border-2 border-gray-300 focus:border-red-500 focus:ring-0 rounded-xl outline-none transition-colors" 
+                        id="mce-EMAIL-2" 
+                        placeholder="deine@email.de" 
+                        required 
+                      />
                     </div>
+                    
                     <div id="mce-responses" className="clear foot">
                       <div className="response" id="mce-error-response" style={{display:'none'}}></div>
                       <div className="response" id="mce-success-response" style={{display:'none'}}></div>
                     </div>
+                    
                     <div style={{position: 'absolute', left: '-5000px'}} aria-hidden="true">
                       <input type="text" name="HONEYPOT_FIELD_NAME" tabIndex={-1} defaultValue="" />
                     </div>
+                    
                     <div className="optionalParent">
                       <div className="clear foot">
-                        <input type="submit" value="Anmelden" name="subscribe" id="mc-embedded-subscribe-2" className="button w-full py-3 text-base bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-medium rounded-xl transition-all duration-300 cursor-pointer" />
+                        <input 
+                          type="submit" 
+                          value="Jetzt anmelden" 
+                          name="subscribe" 
+                          id="mc-embedded-subscribe-2" 
+                          className="w-full py-3 px-6 text-base bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-medium rounded-xl transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl" 
+                        />
                       </div>
                     </div>
                   </div>
                 </form>
               </div>
-              <p className="text-sm text-gray-600 mt-4">
+              <p className="text-sm text-gray-600 mt-4 leading-relaxed">
                 Du erhältst nur wichtige Updates zum Launch. Keine Spam-Mails! 
                 <br />
                 Abmeldung jederzeit möglich.
