@@ -1,5 +1,4 @@
 
-
 import React, { useState } from 'react';
 import { MapPin, Clock, Leaf, Smartphone } from 'lucide-react';
 import { AppMockup } from '@/components/ui/AppMockup';
@@ -102,56 +101,98 @@ export const CustomerBenefits = () => {
             Jetzt für Newsletter anmelden
           </Button>
 
-          {/* Newsletter Form (Mailchimp Embed) */}
+          {/* Newsletter Form (Same as HeroSection) */}
           {showNewsletterForm && (
-            <div className="mt-7 p-6 bg-gray-50 rounded-2xl border-2 border-gray-200 shadow-lg animate-fade-in">
-              <div id="mc_embed_signup">
-                <form action="DEINE-MAILCHIMP-URL" method="post" id="mc-embedded-subscribe-form-2" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
-                  <div id="mc_embed_signup_scroll" className="space-y-5">
-                    <h3 className="text-xl font-semibold text-gray-900">Newsletter abonnieren</h3>
-                    
-                    <div className="mc-field-group text-left">
-                      <label htmlFor="mce-EMAIL-2" className="block text-sm font-medium text-gray-700 mb-2">
-                        E-Mail Adresse <span className="text-red-500">*</span>
-                      </label>
-                      <input 
-                        type="email" 
-                        name="EMAIL" 
-                        className="required email w-full text-base py-3 px-4 border-2 border-gray-300 focus:border-red-500 focus:ring-0 rounded-xl outline-none transition-colors" 
-                        id="mce-EMAIL-2" 
-                        placeholder="deine@email.de" 
-                        required 
-                      />
-                    </div>
-                    
-                    <div id="mce-responses" className="clear foot">
-                      <div className="response" id="mce-error-response" style={{display:'none'}}></div>
-                      <div className="response" id="mce-success-response" style={{display:'none'}}></div>
-                    </div>
-                    
-                    <div style={{position: 'absolute', left: '-5000px'}} aria-hidden="true">
-                      <input type="text" name="HONEYPOT_FIELD_NAME" tabIndex={-1} defaultValue="" />
-                    </div>
-                    
-                    <div className="optionalParent">
-                      <div className="clear foot">
-                        <input 
-                          type="submit" 
-                          value="Jetzt anmelden" 
-                          name="subscribe" 
-                          id="mc-embedded-subscribe-2" 
-                          className="w-full py-3 px-6 text-base bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-medium rounded-xl transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl" 
+            <div className="mt-7 p-6 bg-white rounded-2xl border-2 border-gray-200 shadow-xl animate-fade-in">
+              <div id="mc_embed_shell">
+                <div id="mc_embed_signup">
+                  <form
+                    action="https://gmx.us17.list-manage.com/subscribe/post?u=929bf5738acacbfc061ffcca7&amp;id=3f22f16241&amp;v_id=4483&amp;f_id=0058e9e3f0"
+                    method="post"
+                    id="mc-embedded-subscribe-form-benefits"
+                    name="mc-embedded-subscribe-form"
+                    className="validate"
+                    target="_self"
+                    noValidate
+                  >
+                    <div id="mc_embed_signup_scroll" className="space-y-4">
+                      <h2 className="text-xl font-semibold text-gray-900 mb-2">Newsletter abonnieren</h2>
+                      <div className="text-sm text-gray-600 mb-4">
+                        <span className="text-red-500">*</span> Pflichtfeld
+                      </div>
+                      
+                      <div className="mc-field-group">
+                        <label htmlFor="mce-EMAIL-benefits" className="block text-sm font-medium text-gray-700 mb-2">
+                          E-Mail-Adresse <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                          type="email"
+                          name="EMAIL"
+                          className="required email w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-red-500 focus:ring-0 outline-none transition-colors"
+                          id="mce-EMAIL-benefits"
+                          required
+                          defaultValue=""
+                          placeholder="deine@email.de"
                         />
                       </div>
+                      
+                      <div id="mergeRow-gdpr" className="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
+                        <div className="content__gdpr">
+                          <label className="block text-sm font-medium text-gray-700 mb-3">Datenschutz & Einwilligung</label>
+                          <p className="text-sm text-gray-600 mb-4">
+                            Wir verwenden deine E-Mail-Adresse ausschließlich, um dir Updates rund um
+                            unsere App sowie gelegentliche Informationen zu lokalen Angeboten zu senden.
+                          </p>
+                          <fieldset className="mc_fieldset gdprRequired mc-field-group" name="interestgroup_field">
+                            <label className="flex items-start gap-3 text-sm text-gray-700 cursor-pointer" htmlFor="gdpr220810-benefits">
+                              <input 
+                                type="checkbox" 
+                                id="gdpr_220810-benefits" 
+                                name="gdpr[220810]" 
+                                className="gdpr mt-1 w-4 h-4 text-red-500 rounded focus:ring-red-500" 
+                                value="Y" 
+                              />
+                              <span>Ich möchte über neue Funktionen und Fortschritte bei der App-Entwicklung informiert werden</span>
+                            </label>
+                          </fieldset>
+                          <p className="text-xs text-gray-500 mt-3">
+                            Du kannst dich jederzeit abmelden, indem du auf den Link in der Fußzeile unserer
+                            E-Mails klickst. Informationen zu unseren Datenschutzpraktiken findest du auf unserer Website.
+                          </p>
+                        </div>
+                        <div className="content__gdprLegal mt-4">
+                          <p className="text-xs text-gray-500">
+                            We use Mailchimp as our marketing platform. By clicking below to subscribe, you
+                            acknowledge that your information will be transferred to Mailchimp for processing.{' '}
+                            <a href="https://mailchimp.com/legal/terms" className="text-red-500 hover:underline">Learn more</a> about Mailchimp's privacy practices.
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div id="mce-responses" className="clear foot">
+                        <div className="response" id="mce-error-response" style={{ display: 'none' }}></div>
+                        <div className="response" id="mce-success-response" style={{ display: 'none' }}></div>
+                      </div>
+                      
+                      <div aria-hidden="true" style={{ position: 'absolute', left: '-5000px' }}>
+                        <input type="text" name="b_929bf5738acacbfc061ffcca7_3f22f16241" tabIndex={-1} defaultValue="" />
+                      </div>
+                      
+                      <div className="optionalParent">
+                        <div className="clear foot">
+                          <input
+                            type="submit"
+                            name="subscribe"
+                            id="mc-embedded-subscribe-benefits"
+                            className="w-full py-3 px-6 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-medium rounded-xl transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl"
+                            value="Jetzt anmelden"
+                          />
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </form>
+                  </form>
+                </div>
               </div>
-              <p className="text-sm text-gray-600 mt-4 leading-relaxed">
-                Du erhältst nur wichtige Updates zum Launch. Keine Spam-Mails! 
-                <br />
-                Abmeldung jederzeit möglich.
-              </p>
             </div>
           )}
         </div>
