@@ -12,27 +12,27 @@ export const HeroSection = () => {
         {/* Logo */}
         <div className="mb-12 animate-fade-in">
           <img 
-            src="/lovable-uploads/16c0332c-ab5f-4ccc-b67e-e7c7e00c5ba0.png" 
+            src="/lovable-uploads/7c3c6d86-2926-4aa4-a83b-eec3061e6698.png" 
             alt="Local Angels Logo" 
-            className="h-40 md:h-48 mx-auto drop-shadow-sm"
+            className="h-48 md:h-56 mx-auto drop-shadow-sm"
           />
         </div>
 
         {/* Hero Icons */}
-        <div className="flex justify-center items-center gap-6 mb-12 animate-fade-in">
-          <div className="p-4 bg-red-50 rounded-2xl border border-red-100 shadow-sm">
-            <ShoppingBag className="w-10 h-10 text-red-600" />
+        <div className="flex justify-center items-center gap-5 mb-10 animate-fade-in">
+          <div className="p-3 bg-red-50 rounded-2xl border border-red-100 shadow-sm">
+            <ShoppingBag className="w-8 h-8 text-red-600" />
           </div>
-          <div className="p-4 bg-orange-50 rounded-2xl border border-orange-100 shadow-sm">
-            <Bike className="w-10 h-10 text-orange-600" />
+          <div className="p-3 bg-orange-50 rounded-2xl border border-orange-100 shadow-sm">
+            <Bike className="w-8 h-8 text-orange-600" />
           </div>
-          <div className="p-4 bg-pink-50 rounded-2xl border border-pink-100 shadow-sm">
-            <Heart className="w-10 h-10 text-pink-600" />
+          <div className="p-3 bg-pink-50 rounded-2xl border border-pink-100 shadow-sm">
+            <Heart className="w-8 h-8 text-pink-600" />
           </div>
         </div>
 
         {/* Main Headline */}
-        <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-8 animate-fade-in leading-tight">
+        <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-7 animate-fade-in leading-tight">
           Braunschweig,
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-600">
             {' '}deine Läden
@@ -40,23 +40,23 @@ export const HeroSection = () => {
         </h1>
 
         {/* Subheadline */}
-        <p className="text-2xl md:text-3xl text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in font-light">
+        <p className="text-xl md:text-2xl text-gray-700 mb-10 max-w-4xl mx-auto leading-relaxed animate-fade-in font-light">
           Entdecke lokale Geschäfte in Braunschweig, bestelle online und lass dir alles am selben Tag 
           umweltfreundlich per Fahrrad liefern. Für eine lebendige, nachhaltige Stadt.
         </p>
 
         {/* Newsletter Button */}
-        <div className="max-w-xl mx-auto mb-12 animate-fade-in">
+        <div className="max-w-xl mx-auto mb-10 animate-fade-in">
           <Button 
             onClick={() => setShowNewsletterForm(!showNewsletterForm)}
-            className="px-8 py-6 text-lg bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl rounded-xl"
+            className="px-7 py-5 text-base bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl rounded-xl"
           >
             Für Launch-Updates eintragen
           </Button>
           
           {/* Newsletter Form (Mailchimp Embed) */}
           {showNewsletterForm && (
-            <div className="mt-6 p-6 bg-white rounded-2xl border-2 border-gray-200 shadow-lg">
+            <div className="mt-5 p-5 bg-white rounded-2xl border-2 border-gray-200 shadow-lg">
               {/* Hier wird der vollständige Mailchimp-Einbettungscode eingefügt */}
             <div id="mc_embed_shell">
   <div id="mc_embed_signup">
@@ -70,12 +70,12 @@ export const HeroSection = () => {
       noValidate
     >
       <div id="mc_embed_signup_scroll">
-        <h2>Abonnieren</h2>
-        <div className="indicates-required">
+        <h2 className="text-lg">Abonnieren</h2>
+        <div className="indicates-required text-sm">
           <span className="asterisk">*</span> indicates required
         </div>
         <div className="mc-field-group">
-          <label htmlFor="mce-EMAIL">
+          <label htmlFor="mce-EMAIL" className="text-sm">
             E-Mail-Adresse <span className="asterisk">*</span>
           </label>
           <input
@@ -89,24 +89,24 @@ export const HeroSection = () => {
         </div>
         <div id="mergeRow-gdpr" className="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
           <div className="content__gdpr">
-            <label>Datenschutz &amp; Einwilligung</label>
-            <p>
+            <label className="text-sm">Datenschutz &amp; Einwilligung</label>
+            <p className="text-xs">
               Wir verwenden deine E-Mail-Adresse ausschließlich, um dir Updates rund um
               unsere App sowie gelegentliche Informationen zu lokalen Angeboten zu senden.
             </p>
             <fieldset className="mc_fieldset gdprRequired mc-field-group" name="interestgroup_field">
-              <label className="checkbox subfield" htmlFor="gdpr220810">
+              <label className="checkbox subfield text-xs" htmlFor="gdpr220810">
                 <input type="checkbox" id="gdpr_220810" name="gdpr[220810]" className="gdpr" value="Y" />
                 <span>Ich möchte über neue Funktionen und Fortschritte bei der App-Entwicklung informiert werden</span>
               </label>
             </fieldset>
-            <p>
+            <p className="text-xs">
               Du kannst dich jederzeit abmelden, indem du auf den Link in der Fußzeile unserer
               E-Mails klickst. Informationen zu unseren Datenschutzpraktiken findest du auf unserer Website.
             </p>
           </div>
           <div className="content__gdprLegal">
-            <p>
+            <p className="text-xs">
               We use Mailchimp as our marketing platform. By clicking below to subscribe, you
               acknowledge that your information will be transferred to Mailchimp for processing.{' '}
               <a href="https://mailchimp.com/legal/terms">Learn more</a> about Mailchimp's privacy practices.
@@ -144,8 +144,8 @@ export const HeroSection = () => {
                     src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
                     alt="Intuit Mailchimp"
                     style={{
-                      width: '220px',
-                      height: '40px',
+                      width: '200px',
+                      height: '36px',
                       display: 'flex',
                       padding: '2px 0px',
                       justifyContent: 'center',
@@ -161,7 +161,9 @@ export const HeroSection = () => {
     </form>
   </div>
 </div>
-
+            </div>
+          )}
+        </div>
 
         {/* Instagram Link */}
         <div className="animate-fade-in">
@@ -169,9 +171,9 @@ export const HeroSection = () => {
             href="https://www.instagram.com/localangelapp/?igsh=MXFtOTR1N2syOXE0cg%3D%3D#" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 text-gray-600 hover:text-pink-500 transition-colors duration-300 text-xl font-medium"
+            className="inline-flex items-center gap-3 text-gray-600 hover:text-pink-500 transition-colors duration-300 text-lg font-medium"
           >
-            <Instagram className="w-7 h-7" />
+            <Instagram className="w-6 h-6" />
             Folge uns auf Instagram
           </a>
         </div>

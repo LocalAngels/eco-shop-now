@@ -40,42 +40,42 @@ export const DevelopmentSection = () => {
   };
 
   return (
-    <section className="py-24 px-4 bg-gray-50">
+    <section className="py-20 px-4 bg-gray-50">
       <div className="max-w-5xl mx-auto text-center">
-        <div className="inline-flex p-6 bg-orange-100 rounded-full mb-12 border-2 border-orange-200">
-          <Wrench className="w-12 h-12 text-orange-600" />
+        <div className="inline-flex p-5 bg-orange-100 rounded-full mb-10 border-2 border-orange-200">
+          <Wrench className="w-10 h-10 text-orange-600" />
         </div>
         
-        <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-7">
           Wir sind noch in der Entwicklung
         </h2>
         
-        <div className="bg-white rounded-3xl p-12 border-2 border-gray-200 shadow-xl mb-16">
-          <p className="text-2xl text-gray-700 leading-relaxed mb-12 font-light">
+        <div className="bg-white rounded-3xl p-10 border-2 border-gray-200 shadow-xl mb-14">
+          <p className="text-xl text-gray-700 leading-relaxed mb-10 font-light">
             Ganz transparent: Wir arbeiten gerade am ersten Prototypen und suchen 
             <strong className="text-red-600 font-semibold"> Pilot-Geschäfte in Braunschweig</strong>. 
             Wenn du ein Geschäft hast oder jemanden kennst – meld dich bei uns! 
             Gemeinsam gestalten wir die Zukunft des lokalen Shoppings.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-12">
-            <div className="flex items-center gap-3 text-gray-700 bg-gray-50 px-6 py-4 rounded-2xl">
-              <Users className="w-6 h-6 text-red-500" />
-              <span className="text-lg">Erste Pilot-Partner in Braunschweig gesucht</span>
+          <div className="flex flex-col sm:flex-row gap-7 justify-center items-center mb-10">
+            <div className="flex items-center gap-3 text-gray-700 bg-gray-50 px-5 py-3 rounded-2xl">
+              <Users className="w-5 h-5 text-red-500" />
+              <span className="text-base">Erste Pilot-Partner in Braunschweig gesucht</span>
             </div>
-            <div className="flex items-center gap-3 text-gray-700 bg-gray-50 px-6 py-4 rounded-2xl">
-              <Mail className="w-6 h-6 text-orange-500" />
-              <span className="text-lg">Launch Ende 2025 geplant</span>
+            <div className="flex items-center gap-3 text-gray-700 bg-gray-50 px-5 py-3 rounded-2xl">
+              <Mail className="w-5 h-5 text-orange-500" />
+              <span className="text-base">Launch Ende 2025 geplant</span>
             </div>
           </div>
         </div>
 
         {/* Partner Application Form */}
-        <div className="max-w-3xl mx-auto bg-white rounded-3xl p-12 border-2 border-gray-200 shadow-xl">
-          <h3 className="text-3xl font-bold text-gray-900 mb-8">
+        <div className="max-w-3xl mx-auto bg-white rounded-3xl p-10 border-2 border-gray-200 shadow-xl">
+          <h3 className="text-2xl font-bold text-gray-900 mb-7">
             Interesse an einer Pilot-Partnerschaft?
           </h3>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-lg text-gray-600 mb-7">
             Melde dich unverbindlich für einen Info-Termin oder stelle deine Fragen direkt hier.
           </p>
           
@@ -83,11 +83,11 @@ export const DevelopmentSection = () => {
             action="https://formspree.io/f/mdkzwqdz" 
             method="POST" 
             onSubmit={handleSubmit} 
-            className="space-y-8"
+            className="space-y-7"
           >
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-7">
               <div>
-                <label className="block text-lg font-medium text-gray-800 mb-3">
+                <label className="block text-base font-medium text-gray-800 mb-3">
                   Name des Geschäfts *
                 </label>
                 <Input 
@@ -96,11 +96,11 @@ export const DevelopmentSection = () => {
                   onChange={handleInputChange} 
                   placeholder="z.B. Blumen Müller" 
                   required 
-                  className="text-lg py-6 border-2 border-gray-300 focus:border-red-500 rounded-xl" 
+                  className="text-base py-5 border-2 border-gray-300 focus:border-red-500 rounded-xl" 
                 />
               </div>
               <div>
-                <label className="block text-lg font-medium text-gray-800 mb-3">
+                <label className="block text-base font-medium text-gray-800 mb-3">
                   Ansprechpartner *
                 </label>
                 <Input 
@@ -109,13 +109,13 @@ export const DevelopmentSection = () => {
                   onChange={handleInputChange} 
                   placeholder="Dein Name" 
                   required 
-                  className="text-lg py-6 border-2 border-gray-300 focus:border-red-500 rounded-xl" 
+                  className="text-base py-5 border-2 border-gray-300 focus:border-red-500 rounded-xl" 
                 />
               </div>
             </div>
             
             <div>
-              <label className="block text-lg font-medium text-gray-800 mb-3">
+              <label className="block text-base font-medium text-gray-800 mb-3">
                 E-Mail *
               </label>
               <Input 
@@ -125,12 +125,12 @@ export const DevelopmentSection = () => {
                 onChange={handleInputChange} 
                 placeholder="kontakt@deinladen.de" 
                 required 
-                className="text-lg py-6 border-2 border-gray-300 focus:border-red-500 rounded-xl" 
+                className="text-base py-5 border-2 border-gray-300 focus:border-red-500 rounded-xl" 
               />
             </div>
             
             <div>
-              <label className="block text-lg font-medium text-gray-800 mb-3">
+              <label className="block text-base font-medium text-gray-800 mb-3">
                 Nachricht (optional)
               </label>
               <Textarea 
@@ -139,13 +139,13 @@ export const DevelopmentSection = () => {
                 onChange={handleInputChange} 
                 placeholder="Erzähl uns kurz von deinem Geschäft oder stelle deine Fragen..." 
                 rows={5} 
-                className="text-lg border-2 border-gray-300 focus:border-red-500 resize-none rounded-xl" 
+                className="text-base border-2 border-gray-300 focus:border-red-500 resize-none rounded-xl" 
               />
             </div>
             
             <Button 
               type="submit" 
-              className="w-full py-8 text-xl bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl rounded-xl text-slate-50"
+              className="w-full py-7 text-lg bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl rounded-xl text-slate-50"
             >
               Unverbindlich Interesse bekunden
             </Button>
@@ -155,7 +155,7 @@ export const DevelopmentSection = () => {
             <input type="hidden" name="_next" value={window.location.origin} />
           </form>
           
-          <p className="text-lg text-gray-600 mt-6 font-medium">
+          <p className="text-base text-gray-600 mt-5 font-medium">
             oder schreib uns direkt an local-angel@outlook.de
           </p>
         </div>
