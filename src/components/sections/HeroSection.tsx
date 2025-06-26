@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Instagram, ShoppingBag, Bike, Heart } from 'lucide-react';
@@ -9,11 +10,11 @@ export const HeroSection = () => {
     <section className="min-h-screen flex items-center justify-center px-4 py-18 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-4xl mx-auto text-center">
         {/* Logo */}
-        <div className="mb-11 animate-fade-in">
+        <div className="mb-6 animate-fade-in">
           <img 
             src="/lovable-uploads/7c3c6d86-2926-4aa4-a83b-eec3061e6698.png" 
             alt="Local Angels Logo" 
-            className="h-64 md:h-72 mx-auto drop-shadow-sm"
+            className="h-72 md:h-80 mx-auto drop-shadow-sm"
           />
         </div>
 
