@@ -20,8 +20,8 @@ const ThankYou = () => {
         </h1>
 
         <p className="text-xl text-gray-700 mb-8 max-w-xl mx-auto leading-relaxed animate-fade-in font-light">
-          Du hast dich erfolgreich für unseren Newsletter angemeldet. Wir werden dich über alle wichtigen 
-          Updates zum Launch von Local Angels in Braunschweig informieren.
+          Du hast dich erfolgreich für unseren Newsletter angemeldet. Du erhältst in wenigen Minuten eine 
+          Bestätigungs-E-Mail. Bitte klicke auf den Link in der E-Mail, um deine Anmeldung zu bestätigen.
         </p>
 
         {/* Additional Message */}
