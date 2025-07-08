@@ -13,7 +13,7 @@ export const HeroSection = () => {
         {/* Logo */}
         <div className="mb-6 animate-fade-in">
           <img 
-            src="/lovable-uploads/bffd02b7-d3f0-43f9-886d-a7800725050a.png" 
+            src="/lovable-uploads/e94959c3-9792-4691-84a9-20521a6b6f4d.png" 
             alt="Local Angels Logo" 
             className="h-72 md:h-80 mx-auto drop-shadow-sm"
           />
