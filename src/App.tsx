@@ -9,6 +9,7 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Impressum from "./pages/Impressum";
 import ThankYou from "./pages/ThankYou";
+import EmailConfirmed from "./pages/EmailConfirmed";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/danke" element={<ThankYou />} />
+          <Route path="/bestaetigt" element={<EmailConfirmed />} />
           <Route path="/datenschutz" element={<Privacy />} />
           <Route path="/agb" element={<Terms />} />
           <Route path="/impressum" element={<Impressum />} />
