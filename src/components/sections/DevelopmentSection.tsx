@@ -156,7 +156,7 @@ export const DevelopmentSection = () => {
           </form>
           
           <p className="text-base text-gray-600 mt-5 font-medium">
-            oder schreib uns direkt an local-angel@outlook.de
+            oder schreib uns direkt an local-angels@outlook.de
           </p>
         </div>
       </div>

@@ -41,8 +41,8 @@ const Impressum = () => {
             <p className="text-gray-700">
               Telefon: +49 15161053344<br />
               E-Mail: 
-              <a href="mailto:local-angel@outlook.de" className="text-red-600 hover:text-red-700 ml-2">
-                local-angel@outlook.de
+              <a href="mailto:local-angels@outlook.de" className="text-red-600 hover:text-red-700 ml-2">
+                local-angels@outlook.de
               </a>
             </p>
           </section>

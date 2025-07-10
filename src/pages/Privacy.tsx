@@ -74,8 +74,8 @@ const Privacy = () => {
               Du hast das Recht, jederzeit Auskunft über deine gespeicherten personenbezogenen Daten zu erhalten, 
               deren Berichtigung oder Löschung zu verlangen sowie der Verarbeitung zu widersprechen. Kontaktiere uns 
               dazu gerne unter 
-              <a href="mailto:local-angel@outlook.de" className="text-red-600 hover:text-red-700 ml-1">
-                local-angel@outlook.de
+              <a href="mailto:local-angels@outlook.de" className="text-red-600 hover:text-red-700 ml-1">
+                local-angels@outlook.de
               </a>.
             </p>
           </section>
@@ -96,8 +96,8 @@ const Privacy = () => {
                 Höpskamp 24<br />
                 29633 Munster<br />
                 E-Mail: 
-                <a href="mailto:local-angel@outlook.de" className="text-red-600 hover:text-red-700 ml-1">
-                  local-angel@outlook.de
+                <a href="mailto:local-angels@outlook.de" className="text-red-600 hover:text-red-700 ml-1">
+                  local-angels@outlook.de
                 </a>
               </p>
             </div>

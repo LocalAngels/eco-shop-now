@@ -27,9 +27,9 @@ export const Footer = () => {
           <div>
             <h4 className="text-2xl font-semibold mb-6">Kontakt</h4>
             <div className="space-y-4">
-              <a href="mailto:local-angel@outlook.de" className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors text-lg">
+              <a href="mailto:local-angels@outlook.de" className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors text-lg">
                 <Mail className="w-5 h-5" />
-                local-angel@outlook.de
+                local-angels@outlook.de
               </a>
               <a href="https://www.instagram.com/localangelapp/?igsh=MXFtOTR1N2syOXE0cg%3D%3D#" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-300 hover:text-pink-400 transition-colors text-lg">
                 <Instagram className="w-5 h-5" />
