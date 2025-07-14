@@ -154,7 +154,7 @@ export const HeroSection = () => {
         {/* Instagram Link */}
         <div className="animate-fade-in">
           <a 
-            href="https://www.instagram.com/localangelapp/?igsh=MXFtOTR1N2syOXE0cg%3D%3D#" 
+            href="https://www.instagram.com/localangelsapp/?igsh=MXFtOTR1N2syOXE0cg%3D%3D#" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 text-gray-600 hover:text-pink-500 transition-colors duration-300 text-base font-medium"

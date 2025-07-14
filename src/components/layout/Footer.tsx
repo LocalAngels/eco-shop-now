@@ -31,9 +31,9 @@ export const Footer = () => {
                 <Mail className="w-5 h-5" />
                 local-angels@outlook.de
               </a>
-              <a href="https://www.instagram.com/localangelapp/?igsh=MXFtOTR1N2syOXE0cg%3D%3D#" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-300 hover:text-pink-400 transition-colors text-lg">
+              <a href="https://www.instagram.com/localangelsapp/?igsh=MXFtOTR1N2syOXE0cg%3D%3D#" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-300 hover:text-pink-400 transition-colors text-lg">
                 <Instagram className="w-5 h-5" />
-                @localangelapp
+                @localangelsapp
               </a>
             </div>
           </div>
